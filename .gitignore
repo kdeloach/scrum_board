@@ -1,3 +1,6 @@
 *~
 *.swp
 *.pyc
+env/
+default_settings.py
+node_modules/

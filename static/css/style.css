@@ -1,0 +1,117 @@
+
+body {
+    background: url(../images/cork-board.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card {
+    position: absolute;
+    width: 360px;
+    height: 216px;
+    background-color: #FDFEF9;
+    background-image: url(../images/card.png);
+    line-height: 24px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: cursive;
+    color: #333;
+    transform-origin: 0 0;
+}
+
+.card .body {}
+
+.card .text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 90%;
+    margin-left: -162px; /* card width / 2 x 90% */
+    margin-top: 48px;
+    text-align: center;
+}
+
+.card .topLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .topRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.card .bottomRight {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.card .bottomLeft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.region,
+.h-region,
+.v-region {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.region.h-scroll {
+    overflow: auto;
+}
+
+/* Add offsets so panels aren't clipped by the seperator */
+.h-region > .region:nth-child(2) { margin-top: 5px; }
+.v-region > .region:nth-child(2) { margin-left: 5px; }
+
+.region > .options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #333;
+    color: #fff;
+}
+
+.h-region > .sep,
+.v-region > .sep {
+    position: absolute;
+}
+
+.h-region > .sep {
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    cursor: row-resize;
+}
+
+.v-region > .sep {
+    width: 5px;
+    height: 100%;
+    background: #fff;
+    cursor: col-resize;
+}
+
+.h-region > .region {
+    width: 100%;
+    height: 50%;
+}
+
+.v-region > .region {
+    width: 50%;
+    height: 100%;
+}
