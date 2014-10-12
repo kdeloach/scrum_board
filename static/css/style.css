@@ -24,6 +24,9 @@ body {
     font-family: cursive;
     color: #333;
     transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
 }
 
 .card .body {}
