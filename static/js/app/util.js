@@ -9,15 +9,8 @@ define(['lodash'], function(_) {
             };
         },
         
-        // TODO: Remove once flatMap is supported in lodash.
         flatMap: function(coll, callback, thisArg) {
-            return _.reduce(
-                _.map(coll, callback, thisArg),
-                function(acc, item) {
-                    return acc.concat(item);
-                },
-                []
-            );
+            return _.flatten(_.map(coll, callback, thisArg), true);
         }
     };
 });
